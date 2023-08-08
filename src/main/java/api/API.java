@@ -2,7 +2,7 @@ package api;
 
 import net.serenitybdd.rest.SerenityRest;
 
-import static Config.EnvironmentConfiguration.API_URL;
+import static config.EnvironmentConfiguration.API_URL;
 
 public class API {
 
