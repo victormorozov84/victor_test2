@@ -4,6 +4,7 @@ import api.API;
 import assertion.Assertion;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import net.serenitybdd.rest.SerenityRest;
 
 public class SearchStepDefinitions {
 
