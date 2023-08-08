@@ -138,7 +138,6 @@
                 <artifactId>serenity-maven-plugin</artifactId>
                 <version>${serenity.maven.version}</version>
                 <configuration>
-                    <tags>${tags}</tags>
                 </configuration>
                 <dependencies>
                     <dependency>
