@@ -7,8 +7,8 @@ import io.cucumber.java.en.When;
 
 public class SearchStepDefinitions {
 
-    @When("Take Response from endpoint {string}")
-    public void takeResponseFromEndpoint(String product) {
+    @When("Take Response for product {string}")
+    public void takeResponseForProduct(String product) {
         API.getLastResponse(product);
     }
 
@@ -22,8 +22,8 @@ public class SearchStepDefinitions {
         Assertion.responseBodyContains("title", result);
     }
 
-    @Then("he doesn not see the results")
-    public void he_Doesn_Not_See_The_Results() {
+    @Then("Response doesn't contain the result")
+    public void responseDoesntContainTheResult() {
         Assertion.errorDetailIsTrue("detail.error", true);
     }
 }
