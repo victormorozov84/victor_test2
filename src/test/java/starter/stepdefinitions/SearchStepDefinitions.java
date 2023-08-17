@@ -8,23 +8,23 @@ import net.serenitybdd.rest.SerenityRest;
 
 public class SearchStepDefinitions {
 
-    @When("Take Response for product {string}")
-    public void takeResponseForProduct(String product) {
-        API.getLastResponse(product);
-    }
-
-    @Then("Response Status Code is Match to Value {int}")
-    public void responseStatusCodeIsMatchToValue(int statusCode) {
-        Assertion.statusCode(statusCode);
-    }
-
-    @Then("Response return the results for {string}")
-    public void responseReturnTheResultsDisplayedFor(String result) {
+    @Then("Response returns the results for {string}")
+    public void responseReturnsTheResultsFor(String result) {
         Assertion.responseBodyContains("title", result);
     }
 
-    @Then("Response doesn't contain the result")
-    public void responseDoesntContainTheResult() {
+    @When("Take the response for product {string}")
+    public void takeTheResponseForProduct(String product) {
+        API.getLastResponse(product);
+    }
+
+    @Then("Response does not contain the result")
+    public void responseDoesNotContainTheResult() {
         Assertion.errorDetailIsTrue("detail.error", true);
+    }
+
+    @Then("Response status code matches the value {int}")
+    public void responseStatusCodeMatchesTheValue(int statusCode) {
+        Assertion.statusCode(statusCode);
     }
 }
